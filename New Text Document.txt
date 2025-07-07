@@ -1,0 +1,64 @@
+000001 - creaate account
+000002 - IAM
+	Creating an IAM Group with administrative permissions
+	Adding an IAM User with appropriate credentials
+	Implementing secure login procedures
+	
+	Create an IAM Role named Admin with the AdministratorAccess managed policy
+	Set up a new IAM User called OperatorUser
+	Configure role assumption permissions for OperatorUser
+000007 - cost budget
+000009 - request support
+
+000003
+
+https://390402567579.signin.aws.amazon.com/console
+
+
+🔹 1. Kiến thức nền tảng
+IAM (Identity and Access Management): Học cách tạo user, role, policy, quyền hạn.
+
+AWS Global Infrastructure: Hiểu về Region, Availability Zone, Edge Locations.
+
+🔹 2. Dịch vụ tính toán (Compute)
+EC2 (Elastic Compute Cloud): Máy chủ ảo – tạo, kết nối, SSH, AMI, key pairs.
+
+Lambda: Chạy code serverless (khi bạn đã quen với cơ bản).
+
+🔹 3. Lưu trữ (Storage)
+S3 (Simple Storage Service): Lưu trữ file, bucket, ACL, chính sách truy cập.
+
+EBS (Elastic Block Store): Ổ cứng gắn vào EC2.
+
+Glacier: Lưu trữ lạnh (ít dùng, nhưng nên biết qua).
+
+🔹 4. Cơ sở dữ liệu (Database)
+RDS (Relational Database Service): Tạo MySQL/PostgreSQL server-managed.
+
+DynamoDB: NoSQL – tìm hiểu sau khi đã hiểu RDS.
+
+🔹 5. Mạng (Networking)
+VPC (Virtual Private Cloud): Mạng ảo – cấu trúc subnet, routing, security group.
+
+ELB (Elastic Load Balancer): Cân bằng tải giữa các EC2.
+
+Route 53: Quản lý DNS – nên học khi deploy web.
+
+🔹 6. Triển khai và DevOps
+CloudFormation: IaC – triển khai hạ tầng bằng code (bước nâng cao).
+
+ECS / EKS / Fargate: Chạy container – nên học sau khi biết Docker.
+
+CodePipeline / CodeBuild: CICD pipeline cơ bản trên AWS.
+
+🔹 7. Giám sát & Logging
+CloudWatch: Monitor log, metric, cảnh báo.
+
+CloudTrail: Theo dõi hành động các user và dịch vụ.
+
+🔹 8. Dịch vụ tích hợp (Tùy mục tiêu)
+SNS / SQS: Gửi tin nhắn, queue xử lý bất đồng bộ.
+
+Step Functions: Orchestration cho Lambda.
+
+API Gateway: Tạo REST API endpoint.
