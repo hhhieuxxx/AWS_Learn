@@ -120,6 +120,8 @@ A **fully managed AWS service** that routes client requests to backend targets s
 
 ## Cross-Zone Load Balancing
 
+<img src="/img/alb_cross_zone.png" alt="Alt Text" width="400" height="300">
+
 Allows the Load Balancer to evenly distribute traffic across targets in **all AZs**.
 
 | LB Type | Cross-Zone Enabled by Default |
@@ -129,15 +131,13 @@ Allows the Load Balancer to evenly distribute traffic across targets in **all AZ
 
 > ⚠️ When creating a Load Balancer, make sure to select **all available zones**. If the selected zones do not contain your EC2 instances, you'll get a **502 Bad Gateway** error.
 
+<img src="/img/alb_cross_zone_disabled.png" alt="Alt Text" width="400" height="300">
+
 ---
 
-## ELB Pricing
+## Pricing
 
-### 1. Hourly Fee
-
-- Fixed hourly cost based on region.
-
-### 2. LCU-based Pricing (Load Balancer Capacity Units)
+Fixed hourly cost based on region.
 
 LCU usage is based on:
 
@@ -146,30 +146,6 @@ LCU usage is based on:
 - Number of new connections
 - Average connection duration
 - Number of routing rules applied
-
----
-
-## Auto Scaling + Load Balancing Example
-
-### Lab Steps
-
-1. Launch two EC2 instances (A and B) with different user data for visual distinction.
-2. Create **Target Group tg-01**, add both A and B.
-3. Create an **Application Load Balancer (ALB)** and configure **Listener port 80** to forward to `tg-01`.
-4. Access ALB via DNS link to verify routing.
-
-### Multi Target Group Setup
-
-5. Remove instance B from `tg-01`, create **tg-02** and add instance B.
-6. Add new **Listener port 8080**, forwarding to `tg-02`.
-7. Access ALB via:
-   - `http://<alb-dns>:80` → Instance A
-   - `http://<alb-dns>:8080` → Instance B
-
-### Traffic Ratio (Optional)
-
-8. Configure **traffic split**: `tg-01` gets 25%, `tg-02` gets 75%
-9. Refresh multiple times to observe traffic distribution
 
 ---
 
