@@ -48,7 +48,7 @@
 
 ## Lab 3:
 
-1. Tạo Aurora Cluster với 2 instance (một Write, một Read-replica
+1. Tạo Aurora Cluster với 2 instance (một Write, một Read-replica)
 2. Kết nối đến Cluster sử dụng Write endpoint.
 3. Thực hiện một số thao tác đơn giản (CRUD).
 4. Enable tính năng back tracking
@@ -56,3 +56,18 @@
 6. Xoá toàn bộ data.
 7. Thực hiện back tracking về 5 phút trước đó.
 8. Kiểm tra data đã được phục hồi lại trạng thái trước khi bị xoá.
+
+---
+
+## Lab 4 – RDS Parameter Groups
+
+1. Tạo 1 Parameter Group từ default MySQL 5.x
+2. Cấu hình lại thông số như bảng sau:
+3. Apply Parameter Group đó cho 1 cluster
+
+| Parameter name       | Value                |
+| -------------------- | -------------------- |
+| `max_connections`    | `100`                |
+| `max_allowed_packet` | `100000000` (~100MB) |
+| `long_query_time`    | `0.5`                |
+| `slow_query_log`     | `1`                  |

@@ -112,3 +112,13 @@ AWS supports RDS clusters which simplify management of nodes and failovers.
 ## Snapshots
 
 ---
+
+## RDS Proxy
+
+RDS hỗ trợ một cơ chế **Proxy** để quản lý connection hiệu quả, giúp giảm thiểu **bottleneck** do ứng dụng quản lý kém connection pool.
+
+- Ứng dụng sẽ kết nối **thông qua proxy endpoint**, không trực tiếp tới RDS.
+- **Chi phí proxy** sẽ được tính thêm.
+- Hỗ trợ các engine: **MySQL**, **PostgreSQL**, **SQL Server**
+
+---
