@@ -1,0 +1,35 @@
+// Config trust policy to allow switch role.
+// Trust policy example
+{
+    "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                    "AWS": [
+                        "arn:aws:iam::430950558682:user/developer-01"
+                    ]
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+}
+
+# role-name: allow-dev-pes01-assume-role
+# trust-policy
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::753387216052:user/dev-pes01"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+# role policy
+AmazonS3ReadOnlyAccess

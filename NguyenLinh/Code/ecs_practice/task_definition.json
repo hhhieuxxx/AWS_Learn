@@ -1,0 +1,25 @@
+{
+    "family": "sample-fargate",
+    "networkMode": "awsvpc",
+    "taskRoleArn": "arn:aws:iam::753387216052:role/ecs-task-role",
+    "executionRoleArn": "arn:aws:iam::753387216052:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "name": "fargate-app",
+            "image": "753387216052.dkr.ecr.us-east-1.amazonaws.com/my-httpd:latest",
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512"
+}

@@ -1,0 +1,18 @@
+# Statement deny developer-01 do any action in test-bucket-26052024 bucket
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "deny-developer-01",
+            "Effect": "Deny",
+            "Principal": {
+                "AWS": "arn:aws:iam::753387216052:user/developer-01"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::test-bucket-26052024",
+                "arn:aws:s3:::test-bucket-26052024/*"
+            ]
+        }
+    ]
+}
