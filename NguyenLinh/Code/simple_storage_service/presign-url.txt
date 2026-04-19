@@ -1,3 +1,0 @@
-# this command is used for generate a presign url to access to the resouce in s3
-aws s3 presign s3://my-bucker-20240527/AK0A9608.JPG --expires-in 60 --profile admin
-# it will return for you a url to see the picture in 60 seconds.
